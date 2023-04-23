@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ssur.HomeController">
+   <left>
+      <VBox prefHeight="396.0" prefWidth="148.0" styleClass="sideMenu" stylesheets="@Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lb_programmname" alignment="CENTER" prefHeight="45.0" prefWidth="130.0" text="SSUR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rbtn_simulation" mnemonicParsing="false" onAction="#goToSimulation" prefHeight="42.0" prefWidth="174.0" selected="true" styleClass="sideMenuButton" stylesheets="@Style.css" text="Simulation">
+               <toggleGroup>
+                  <ToggleGroup fx:id="modus" />
+               </toggleGroup>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="rbtn_rekonstruktion" mnemonicParsing="false" onAction="#goToRekonstruktion" prefHeight="42.0" prefWidth="178.0" styleClass="sideMenuButton" stylesheets="@Style.css" text="Rekonstruktion" toggleGroup="$modus">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </RadioButton>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="42.0" prefWidth="0.0" />
+            <Button fx:id="btn_start" mnemonicParsing="false" onAction="#starteBerechnung" prefHeight="41.0" prefWidth="167.0" styleClass="sideMenuButton" stylesheets="@Style.css" text="START">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/start.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_einstellungen" mnemonicParsing="false" onAction="#goToSettings" prefHeight="34.0" prefWidth="181.0" styleClass="sideMenuButton" stylesheets="@Style.css" text="Einstellungen">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/settings.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="42.0" prefWidth="0.0" />
+            <Label fx:id="lb_version" alignment="CENTER" prefHeight="18.0" prefWidth="198.0" styleClass="MenuText" stylesheets="@Style.css" text="Version 0.2" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <VBox prefHeight="154.0" prefWidth="850.0" styleClass="bottomMenu" stylesheets="@Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lb_parametertitel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="877.0" styleClass="MenuText" stylesheets="@Style.css" text="Parameter">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="118.0" prefWidth="348.0">
+               <children>
+                  <VBox prefHeight="118.0" prefWidth="160.0">
+                     <children>
+                        <Label fx:id="lb_gewicht" alignment="CENTER" prefHeight="18.0" prefWidth="223.0" styleClass="MenuText" stylesheets="@Style.css" text="Gewicht (in kg)" />
+                        <TextField fx:id="tf_gewicht" prefHeight="26.0" prefWidth="12.0" />
+                        <Label fx:id="lb_impuls" alignment="CENTER" prefHeight="18.0" prefWidth="223.0" styleClass="MenuText" stylesheets="@Style.css" text="Impuls (in N/m)" />
+                        <TextField fx:id="tf_impuls" />
+                     </children>
+                  </VBox>
+                  <Separator opacity="0.0" prefWidth="20.0" />
+                  <VBox maxWidth="1.7976931348623157E308" prefHeight="118.0" prefWidth="142.0">
+                     <children>
+                        <Label fx:id="lb_geschwindigkeit" alignment="CENTER" prefHeight="18.0" prefWidth="242.0" styleClass="MenuText" stylesheets="@Style.css" text="Geschwindigkeit (in km/h)" />
+                        <TextField fx:id="tf_geschwindigkeit" />
+                        <Label fx:id="lb_fahrtrichtung" alignment="CENTER" prefHeight="18.0" prefWidth="223.0" styleClass="MenuText" stylesheets="@Style.css" text="Fahrtrichtung" />
+                        <ChoiceBox fx:id="cb_fahrtrichtung" prefWidth="150.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ChoiceBox>
+                     </children>
+                  </VBox>
+                  <Separator opacity="0.0" prefWidth="20.0" />
+                  <VBox maxWidth="1.7976931348623157E308" prefHeight="118.0" prefWidth="142.0">
+                     <children>
+                        <Label fx:id="lb_energie" alignment="CENTER" prefHeight="18.0" prefWidth="223.0" styleClass="MenuText" stylesheets="@Style.css" text="Energie (in J)" />
+                        <TextField fx:id="tf_energie" />
+                        <Label fx:id="lb_fahrzeugtyp" alignment="CENTER" prefHeight="18.0" prefWidth="223.0" styleClass="MenuText" stylesheets="@Style.css" text="Fahrzeugtyp" />
+                        <ChoiceBox fx:id="cb_fahrzeugtyp" prefWidth="150.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor></ChoiceBox>
+                     </children>
+                  </VBox>
+                  <Separator opacity="0.0" prefWidth="20.0" />
+                  <VBox maxWidth="1.7976931348623157E308" prefHeight="118.0" prefWidth="142.0">
+                     <children>
+                        <Label fx:id="lb_startpunkt" alignment="CENTER" prefHeight="18.0" prefWidth="223.0" styleClass="MenuText" stylesheets="@Style.css" text="Startpunkt (in m)" />
+                        <TextField fx:id="tf_startpunkt" />
+                        <Label fx:id="lb_untergrund" alignment="CENTER" prefHeight="18.0" prefWidth="223.0" styleClass="MenuText" stylesheets="@Style.css" text="Untergrund" />
+                        <ChoiceBox fx:id="cb_untergrund" prefWidth="150.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ChoiceBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" prefHeight="137.0" prefWidth="142.0">
+                     <children>
+                        <Button fx:id="btn_zuruecksetzen" alignment="CENTER" mnemonicParsing="false" onAction="#berechnungZuruecksetzen" prefHeight="26.0" prefWidth="90.0" text="Zurücksetzen" />
+                        <Separator opacity="0.0" orientation="VERTICAL" prefHeight="15.0" />
+                        <Button fx:id="btn_parameterspeichern" alignment="CENTER" mnemonicParsing="false" onAction="#speichereParameter" prefHeight="26.0" prefWidth="90.0" text="Speichern" />
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ToggleButton fx:id="tbtn_fahrzeug1" contentDisplay="BOTTOM" graphicTextGap="0.0" layoutX="14.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#ladeParameter" selected="true" styleClass="fahrzeugButton" stylesheets="@Style.css" text="Fahrzeug 1">
+               <graphic>
+                  <ImageView fx:id="iv_fahrzeug1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/auto_s.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <toggleGroup>
+                  <ToggleGroup fx:id="fahrzeug" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="tbtn_fahrzeug2" contentDisplay="BOTTOM" graphicTextGap="0.0" layoutX="522.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#ladeParameter" styleClass="fahrzeugButton" stylesheets="@Style.css" text="Fahrzeug 2" toggleGroup="$fahrzeug">
+               <graphic>
+                  <ImageView fx:id="iv_fahrzeug2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/auto_s_r.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <Label fx:id="lb_aufprallzeitpunkt" alignment="CENTER" layoutX="1.0" layoutY="168.0" prefHeight="17.0" prefWidth="702.0" text="Aufprallzeitpunkt:" textAlignment="CENTER" />
+            <Label fx:id="lb_aufprallort" alignment="CENTER" layoutX="1.0" layoutY="144.0" prefHeight="17.0" prefWidth="700.0" text="Aufprallort:" textAlignment="CENTER" />
+            <Label fx:id="lb_anhalteweg" alignment="CENTER" layoutY="119.0" prefHeight="17.0" prefWidth="701.0" text="Anhalteweg:" textAlignment="CENTER" />
+            <Label fx:id="lb_modus" alignment="CENTER" layoutY="28.0" prefHeight="35.0" prefWidth="701.0" text="Simulationsmodus" textAlignment="CENTER" textFill="#363636">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_rekonstruktion" alignment="CENTER" layoutY="92.0" prefHeight="17.0" prefWidth="703.0" text="Rekonstruktion:" />
+         </children></Pane>
+   </center>
+</BorderPane>

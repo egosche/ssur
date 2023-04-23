@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ssur.SettingsController">
+   <children>
+      <Label fx:id="lb_titel" alignment="CENTER" layoutY="78.0" prefHeight="18.0" prefWidth="600.0" text="SSUR">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Button fx:id="btn_zurueck" layoutX="274.0" layoutY="302.0" mnemonicParsing="false" onAction="#goToHome" text="Zurück" />
+      <Label fx:id="lb_beschreibung" alignment="CENTER" layoutY="113.0" prefHeight="18.0" prefWidth="600.0" text="Stoßsimulation und Rekonstruktion" />
+      <Label fx:id="lb_version" layoutX="269.0" layoutY="200.0" text="Version: 0.2" />
+      <Label fx:id="lb_autor" layoutX="256.0" layoutY="182.0" text="Autor: EGoesche" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+.root {
+    -fx-background-color:white;
+}
+
+.pane {
+	-fx-background-color:#f5f6fa;
+}
+.sideMenu {
+	-fx-background-color:#0a3d62;
+	}
+	
+.bottomMenu {
+	-fx-background-color:#40739e;
+}
+
+.sideMenuButton {
+	-fx-background-color:#0a3d62;
+	-fx-text-fill:white;
+	-fx-font-size: 13px;
+	-fx-focus-color: transparent;
+	-fx-alignment: center-left;
+	}
+	
+.fahrzeugButton {
+	-fx-background-color:#CCD7E3;
+}
+
+.fahrzeugButton:selected {
+	-fx-background-color: -fx-focus-color;
+}
+
+.MenuText {
+	-fx-text-fill:white;
+}
+	
+.sideMenuButton:hover { 
+    -fx-background-color:#072D47;
+}
+
+.sideMenuButton:selected { 
+    -fx-background-color:#3c6382;
+}
