@@ -1,57 +1,47 @@
 <!--lint disable no-literal-urls-->
-# SSUR - Stosssimulation und Rekonstruktion
-Das SSUR-Projekt ist eine Simulations- und Rekonstruktionssoftware, mit welcher es möglich ist, physikalische Stoßvorgänge mit unterschiedlichen
-Charakteristiken zu simulieren und rekonstruieren. Konkret sollen diese Vorgänge anhand
-Kollisionen von Fahrzeugen veranschaulicht werden. Dazu sollen mithilfe einer
-entsprechenden grafischen Oberfläche Fahrzeuge wie PKWs oder LKWs zueinander
-positioniert werden können. Im Simulationsmodus werden, nach Eingabe physikalischer
-Größen, welche für diesen Vorgang bedeutsam sind, die dazugehörigen Parameter nach dem
-Stoßvorgang zwischen den Stoßpartnern berechnet und visuell veranschaulicht. Im
-Rekonstruktionsmodus werden verfügbare Parameter eines bereits geschehenen
-Stoßvorganges verwendet, um zu überprüfen, ob der zu überprüfende Stoß unter
-Berücksichtigung der physikalischen Gesetzmäßigkeiten in der beschriebenen Art und Weise
-erfolgt sein kann.
-Hinweis: Dieses Projekt ist im Rahmen einer Belegarbeit entstanden.
+# SSUR - Stosssimulation und Rekonstruktion (engl. Shock simulation and reconstruction)
+The SSUR project is a simulation and reconstruction software, with which it is possible to simulate and reconstruct physical impact processes with different characteristics. Specifically, these processes are to be collisions of vehicles. For this purpose vehicles such as cars or trucks can be positioned in relation to each other. In the simulation mode, after the input of physical which are significant for this process, the corresponding parameters are calculated after the impact process between the collision partners and visually illustrated. In the reconstruction mode available parameters of an already happened impact process are are used to check whether the impact is correct under consideration of the physical laws in the manner described above.
+Note: This project was developed as part of a student research project.
 
-Übersicht
+Overview
 ---------------------
  * Installation
- * Funktionen
- * Unter Verwendung von
- * Autoren
- * Lizenz
+ * Functions
+ * Using
+ * Authors
+ * License
  
  Installation
 ------------
-Bevor das Projekt kopiert und genutzt werden kann, benötigen Sie folgende Software:
+Before the project can be copied and used, you need the following software:
 
 ```
-Java 8 (oder neuer)
-JavaFX 13 (oder neuer)
+Java 8 (or newer)
+JavaFX 13 (or newer)
 ```
-Klonen oder downloaden Sie diesen Branch. Um das Programm direkt zu starten, können sie einfach die JAVA-Datei ausführen.
-Um den Code einsehen zu können, importieren Sie die source-Datei in eine IDE Ihrer Wahl.
+Clone or download this branch. To run the program directly, you can simply execute the JAVA file.
+To view the code, import the source file into an IDE of your choice.
 
 
- Funktionen
+ Functions
 ------------
-* Simulations- und Rekonstruktionsmodus:
- >* Fahrzeuge wechseln
- >* Fahrtrichtung einstellen
- >* Untergrund auswählen
-* Ermittlung relevanter Stoßparameter
+* Simulation and reconstruction mode:
+ >* change vehicles
+ >* set driving direction
+ >* select ground
+* Determination of relevant impact parameters
 
-Unter Verwendung von
+Using
 ------------
-* [Gluon Scene Builder](https://gluonhq.com/products/scene-builder/) - Benutzt für die Erstellung der Benutzeroberfläche
-* [JavaFX](https://openjfx.io/) - Framework für die Erstellung von Benutzeroberflächen
+* [Gluon Scene Builder](https://gluonhq.com/products/scene-builder/) - Used for the creation of the user interface
+* [JavaFX](https://openjfx.io/) - Framework for the creation of user interfaces
 
- Autoren
+ Authors
 ------------
-* **Erik** - *Developer* - [EGoesche](https://github.com/EGoesche)
+* **Erik** - *Developer* - [ErikGoesche](https://github.com/erikgoesche)
 
-Um zu erfahren, wer zusätzlich an diesem Projekt gearbeitet hat, lesen Sie bitte die contributors-Datei.
+To learn who additionally worked on this project, please read the contributors file.
 
-Lizenz
+License
 ------------
-Dieses Projekt ist lizensiert unter der MIT-Lizenz - weitere Informationen unter [LICENSE](LICENSE).
+This project is licensed under the MIT license - more information at [LICENSE](LICENSE).
