@@ -1,6 +1,7 @@
 <!--lint disable no-literal-urls-->
 # SSUR - Stosssimulation und Rekonstruktion (engl. Shock simulation and reconstruction)
 The SSUR project is a simulation and reconstruction software, with which it is possible to simulate and reconstruct physical impact processes with different characteristics. Specifically, these processes are to be collisions of vehicles. For this purpose vehicles such as cars or trucks can be positioned in relation to each other. In the simulation mode, after the input of physical which are significant for this process, the corresponding parameters are calculated after the impact process between the collision partners and visually illustrated. In the reconstruction mode available parameters of an already happened impact process are are used to check whether the impact is correct under consideration of the physical laws in the manner described above.
+
 Note: This project was developed as part of a student research project.
 
 Overview
